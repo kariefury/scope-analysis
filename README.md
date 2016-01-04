@@ -16,4 +16,6 @@ Next, it's ok to run several different scripts in any order.
 
 `python check_0xFF00_bits.py` checks to see if the saved data chunks are 0xFF00
 
-`python compare_0xFF00_bits.py ` plots different saved data chunks using dimensionless x-axis
+`python compare_0xFF00_bits.py ` plots different saved data chunks using dimensionless x-axis (causing overlap)
+
+`python original_time_side_by_side_plots.py ` plots saved data chunks on their original time scale for x-axis.
