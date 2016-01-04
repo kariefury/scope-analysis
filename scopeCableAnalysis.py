@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-fname = "0xFF00_1pt5AllWaveforms.csv"
+fname = "/Volumes/PENNY/0xFF00_0pt5AllWaveforms.csv"
 with open(fname) as f:
 	lines = [line.rstrip('\n') for line in f]
 
@@ -30,7 +30,8 @@ print lines[21]
 print lines[22]
 
 data_chunks = []
-i = 1022
+#i = 1022
+i = 222977
 chunk_size = 7000
 while i < len(lines):
 	try:
@@ -47,7 +48,7 @@ print 'number of chunks of data ',  len(data_chunks)
 i = 0
 
 #while i < len(data_chunks):
-while i < 2:
+while i < 4:
 	x_vals = []
 	y_vals_channel_1 = []
 	y_vals_channel_2 = []
