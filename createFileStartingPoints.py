@@ -1,13 +1,14 @@
 import matplotlib.pyplot as plt
 
-lengthOfWire = ["0pt15","0pt5","0pt9","1pt15"]
+lengthOfWire = ["0pt15"]
 
 
 q = 0
 while q < len(lengthOfWire):
 
-	fname = "/Volumes/PENNY/0xFF00_"+lengthOfWire[q]+"AllWaveforms.csv"
-	saveName = "/Volumes/PENNY/0xFF00_"+lengthOfWire[q]+"_hightolowC1.csv"
+	fname = "/Volumes/PENNY/"+lengthOfWire[q]+"_counter.csv"
+	#fname = "/Volumes/PENNY/0xFF00_"+lengthOfWire[q]+"AllWaveforms.csv"
+	saveName = "/Volumes/PENNY/counter_"+lengthOfWire[q]+"_hightolowC1.csv"
 
 	with open(fname) as f:
 		lines = [line.rstrip('\n') for line in f]

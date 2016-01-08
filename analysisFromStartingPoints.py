@@ -1,15 +1,17 @@
 import matplotlib.pyplot as plt
 
 
-lengthOfWire = ["0pt15","0pt5","0pt9","1pt15"]
+lengthOfWire = ["0pt15"]
 
 
 k = 0
 while k < len(lengthOfWire):
-	fname = "/Volumes/PENNY/0xFF00_"+lengthOfWire[k]+"AllWaveforms.csv"
+	fname = "/Volumes/PENNY/"+lengthOfWire[k]+"_counter.csv"
+	#fname = "/Volumes/PENNY/0xFF00_"+lengthOfWire[k]+"AllWaveforms.csv"
 	#finame = "/Volumes/PENNY/0xFF00_"+lengthOfWire[k]+"_hightolowC1.csv"
-	finame = "/Volumes/PENNY/0xFF00_"+lengthOfWire[k]+"_chunkStarts.csv"
-	saveName = "/Volumes/PENNY/0xFF00_"+lengthOfWire[k]+"_decoded_values.csv"
+	#finame = "/Volumes/PENNY/0xFF00_"+lengthOfWire[k]+"_chunkStarts.csv"
+	finame = "/Volumes/PENNY/counter_"+lengthOfWire[k]+"_chunkStarts.csv"
+	saveName = "/Volumes/PENNY/counter_"+lengthOfWire[k]+"_decoded_values.csv"
 	fileSpot = "/Volumes/PENNY/splitData/"+lengthOfWire[k]+"/"
 	with open(finame) as f:
 		indices =  [index.rstrip('\n') for index in f]
@@ -98,8 +100,8 @@ while k < len(lengthOfWire):
 		#print len(x_vals)
 		#print len(y_vals_channel_2)
 		#print len(y_vals_channel_1)
-		#plt.plot(x_vals,c1_binary,x_vals,c2_binary,x_vals,y_vals_channel_1,x_vals,y_vals_channel_2)
-		#plt.show()
+		plt.plot(x_vals,c1_binary,x_vals,c2_binary,x_vals,y_vals_channel_1,x_vals,y_vals_channel_2)
+		plt.show()
 
 		i = 0
 		x_count = len(x_vals)
